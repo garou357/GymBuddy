@@ -58,7 +58,7 @@ body {
     right: 40px;
     top: 0px;
     width: 500px;
-    height: 700px;
+    height: 600px;
     margin-top: -250px;
     border-radius: 30px;
   
@@ -97,7 +97,9 @@ body {
     color: #FF2625 !important;
     border: 1px solid #FF2625 !important;
   }
-  
+  .btn:hover{
+    color: #FF2625 !important;
+  }
   .exercise-video {
     display: flex;
     flex-direction: column;
