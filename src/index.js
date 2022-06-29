@@ -13,4 +13,4 @@ root.render(
     </BrowserRouter>
   </React.StrictMode>,
 );
-//we are rendering the app component 
+

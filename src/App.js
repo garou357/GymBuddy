@@ -1,6 +1,6 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';//use this to route our homepage and exercise detail page
-import { Box } from '@mui/material'; //essentially just a div with some colors
+import { Route, Routes } from 'react-router-dom';
+import { Box } from '@mui/material';
 
 import './App.css';
 import ExerciseDetail from './pages/ExerciseDetail';
