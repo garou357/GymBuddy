@@ -5,18 +5,18 @@ import { exerciseOptions, fetchData } from '../utils/fetchData';
 import HorizontalScrollbar from './HorizontalScrollbar';
 
 const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
-  const [search, setSearch] = useState('');
-  const [bodyParts, setBodyParts] = useState([]);
+  const [search, setSearch] = useState(''); // search term for exercises to be searched for in the API 
+  const [bodyParts, setBodyParts] = useState([]); // list of body parts to be displayed in the horizontal scrollbar
 
-  useEffect(() => {
+  useEffect(() => { // fetches the body parts from the API and sets them to the state variable bodyParts 
     const fetchExercisesData = async () => {
-      const bodyPartsData = await fetchData('https://exercisedb.p.rapidapi.com/exercises/bodyPartList', exerciseOptions);
+      const bodyPartsData = await fetchData('https://exercisedb.p.rapidapi.com/exercises/bodyPartList', exerciseOptions); // fetches the body parts from the API, exerciseOptions is defined in the utils folder
 
-      setBodyParts(['all', ...bodyPartsData]);
+      setBodyParts(['all', ...bodyPartsData]); // sets the body parts to the state variable bodyParts, 'all' is added to the beginning of the array to allow the user to search for all exercises
     };
 
     fetchExercisesData();
-  }, []);
+  }, []); // empty array as a second argument to useEffect means that the function will only run once when the component is mounted
 
   const handleSearch = async () => {
     if (search) {
@@ -32,7 +32,7 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
       window.scrollTo({ top: 1800, left: 100, behavior: 'smooth' });
 
       setSearch('');
-      setExercises(searchedExercises);
+      setExercises(searchedExercises); // sets the exercises to the state variable exercises
     }
   };
 
