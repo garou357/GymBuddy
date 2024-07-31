@@ -1,4 +1,3 @@
-import RAPID_API_KEY from './apikeys';
 export const exerciseOptions = {
   method: 'GET',
   url: 'https://exercisedb.p.rapidapi.com/exercises/bodyPartList',
