@@ -2,16 +2,16 @@ export const exerciseOptions = {
   method: 'GET',
   url: 'https://exercisedb.p.rapidapi.com/exercises/bodyPartList',
   headers: {
-    'x-rapidapi-key': RAPID_API_KEY,
-    'x-rapidapi-host': 'exercisedb.p.rapidapi.com'
+    'X-RapidAPI-Key': process.env.RAPID_API_KEY,
+    'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
   }
 };
 
 export const youtubeOptions = {
   method: 'GET',
   headers: {
-    'x-rapidapi-host': 'youtube-search-and-download.p.rapidapi.com',
-    'x-rapidapi-key': RAPID_API_KEY,
+    'X-RapidAPI-Host': 'youtube-search-and-download.p.rapidapi.com',
+    'X-RapidAPI-Key': process.env.RAPID_API_KEY,
     
   }
 };
